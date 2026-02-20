@@ -6,7 +6,8 @@ import Navbar from "./Navbar";
 import person from "../assets/Gambar/pers.png";
 import Title from "../components/Title";
 import Skill from "../Pages/Skill";
-import foto from "../assets/works/listtas.png";
+
+import Works from "../Pages/Works";
 
 const MainLayout = () => {
   return (
@@ -45,29 +46,8 @@ const MainLayout = () => {
         </section>
 
         {/* ===== WORKS ===== */}
-        <section className="px-12 py-20">
-          <h3 className="text-3xl font-bold mb-10">Works</h3>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div
-                key={item}
-                className="bg-white/15 backdrop-blur-xl
-                  border border-white/30
-                  rounded-2xl p-6
-                  hover:scale-105 transition"
-              >
-                <img
-                  src={foto}
-                  className="h-36 rounded-xl bg-black/20 mb-4 w-full object-cover "
-                />
-                <h4 className="font-semibold mb-2">Project {item}</h4>
-                <p className="text-sm opacity-80">
-                  Short project description here.
-                </p>
-              </div>
-            ))}
-          </div>
+        <section className="px-6 py-20">
+          <Works />
         </section>
       </div>
     </div>

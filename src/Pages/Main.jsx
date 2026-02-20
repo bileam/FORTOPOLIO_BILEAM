@@ -14,18 +14,20 @@ const Main = () => {
         I build modern, clean, and scalable web applications with a focus on
         performance and user experience.
       </p>
-
       <div className="flex gap-5">
-        <Button
-          className=" rounded-xl 
-                bg-white text-indigo-600 font-semibold
-                hover:scale-105 transition"
+        <a
+          href=""
+          className="p-2 bg-white text-indigo-600 rounded-md hover:scale-105 transition"
         >
-          Hire Me
-        </Button>
-        <Button className="border cursor-pointer bg-linear-to-r from-[#444dfa] shadow-2xl to-[#d339da]/40 hover:scale-105 transition">
+          My Github
+        </a>
+
+        <a
+          href=""
+          className="border scale-110 py-2 px-4 rounded-md cursor-pointer bg-linear-to-r from-[#444dfa] shadow-2xl to-[#d339da]/40 hover:scale-105 transition"
+        >
           Download CV
-        </Button>
+        </a>
       </div>
     </div>
   );

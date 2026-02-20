@@ -9,6 +9,7 @@ import mysql from "../assets/IconSkill/mysql.svg";
 import mongodb from "../assets/IconSkill/mongodb.svg";
 import python from "../assets/IconSkill/python.svg";
 import javascript from "../assets/IconSkill/javascript.svg";
+import versel from "../assets/IconSkill/versel.svg";
 export const skillME = [
   { id: 1, logo: react, name: "React JS", persen: 95 },
   { id: 2, logo: tailwindcss, name: "Tailwind Css", persen: 90 },
@@ -21,4 +22,5 @@ export const skillME = [
   { id: 9, logo: mysql, name: "Mysql", persen: 75 },
   { id: 10, logo: python, name: "Python", persen: 50 },
   { id: 10, logo: javascript, name: "JavaScript", persen: 87 },
+  { id: 10, logo: versel, name: "Versel", persen: 87 },
 ];

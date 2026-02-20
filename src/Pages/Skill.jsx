@@ -11,7 +11,7 @@ const Skill = () => {
     >
       <Title>Skill</Title>
       <p className="mb-2 text-[#2f2b55]">
-        Here are the technologogies i work with:
+        Here are the technologogies i work with
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         {skillME.map((items) => (
