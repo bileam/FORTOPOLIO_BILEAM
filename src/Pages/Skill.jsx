@@ -13,7 +13,7 @@ const Skill = () => {
       <p className="mb-2 text-[#2f2b55]">
         Here are the technologogies i work with:
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         {skillME.map((items) => (
           <div
             key={items.id}
@@ -24,7 +24,11 @@ const Skill = () => {
           >
             <img src={items.logo} alt="" className="w-10  h-10 object-cover" />
             <div className="flex flex-col w-full">
-              <h1>{items.name}</h1>
+              <div className="flex justify-between w-full">
+                <h1>{items.name}</h1>
+                <h1>{items.persen} %</h1>
+              </div>
+
               <div className=" relative w-full h-2 border rounded-md">
                 <span
                   className={`absolute left-0 bottom-0 h-full ${

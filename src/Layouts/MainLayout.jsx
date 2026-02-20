@@ -3,9 +3,10 @@ import GlowBlue from "../components/GlowBLue";
 import About from "../Pages/About";
 import Main from "../Pages/Main";
 import Navbar from "./Navbar";
-import person from "../assets/Gambar/person.png";
+import person from "../assets/Gambar/pers.png";
 import Title from "../components/Title";
 import Skill from "../Pages/Skill";
+import foto from "../assets/works/listtas.png";
 
 const MainLayout = () => {
   return (
@@ -16,29 +17,18 @@ const MainLayout = () => {
       {/* ===== GLOW BACKGROUND ===== */}
       <GlowPink className="top-[-25%] left-[-15%] " />
       <GlowBlue className="bottom-[-25%] right-[-15%]" />
-      {/* ===== CONTENT ===== */}
-      <div className="relative z-10 text-white">
-        {/* ===== NAVBAR ===== */}
-        {/* <nav className="flex justify-between items-center px-12 py-8">
-          <h1 className="text-2xl font-bold tracking-wide">Bileam</h1>
 
-          <ul className="flex gap-8 text-sm opacity-90">
-            <li className="hover:opacity-100 cursor-pointer">Home</li>
-            <li className="hover:opacity-100 cursor-pointer">About</li>
-            <li className="hover:opacity-100 cursor-pointer">Skills</li>
-            <li className="hover:opacity-100 cursor-pointer">Works</li>
-          </ul>
-        </nav> */}
+      <div className="relative z-10 text-white">
         <Navbar />
 
         {/* ===== HERO ===== */}
-        <section className="px-12 py-24 grid md:grid-cols-2 gap-16 items-center  ">
+        <section className="px-6 py-24 grid md:grid-cols-2 gap-16 items-center  ">
           <Main />
           <div className="flex justify-center md:order-2 order-1">
             <img
               src={person}
               alt=""
-              className="md:w-72 md:h-72 w-80  h-72 rounded-3xl  object-center object-cover
+              className="md:w-72 md:h-72 w-80 shadow-blue-600   h-72 rounded-3xl  object-center object-cover
               bg-white/20 backdrop-blur-xl
               border border-white/30
               shadow-2xl
@@ -47,12 +37,10 @@ const MainLayout = () => {
           </div>
         </section>
 
-        <section className="px-12 py-20">
+        <section className="px-6 py-20">
           <About />
         </section>
-
-        {/* ===== SKILLS ===== */}
-        <section className="px-12 py-20">
+        <section className="px-6 py-20">
           <Skill />
         </section>
 
@@ -69,7 +57,10 @@ const MainLayout = () => {
                   rounded-2xl p-6
                   hover:scale-105 transition"
               >
-                <div className="h-36 rounded-xl bg-black/20 mb-4" />
+                <img
+                  src={foto}
+                  className="h-36 rounded-xl bg-black/20 mb-4 w-full object-cover "
+                />
                 <h4 className="font-semibold mb-2">Project {item}</h4>
                 <p className="text-sm opacity-80">
                   Short project description here.
