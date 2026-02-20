@@ -8,6 +8,7 @@ import Title from "../components/Title";
 import Skill from "../Pages/Skill";
 
 import Works from "../Pages/Works";
+import Bulat from "../components/Bulat";
 
 const MainLayout = () => {
   return (
@@ -18,10 +19,15 @@ const MainLayout = () => {
       {/* ===== GLOW BACKGROUND ===== */}
       <GlowPink className="top-[-25%] left-[-15%] " />
       <GlowBlue className="bottom-[-25%] right-[-15%]" />
+      <Bulat className="top-100 left-120" />
+      <Bulat className="top-230 left-120" />
+      <Bulat className="top-300 left-120" />
+      <Bulat className="top-400 left-120" />
+      <Bulat className="top-500 left-120" />
+      <Bulat className="bottom-40 left-50" />
 
-      <div className="relative z-10 text-white">
+      <div className=" z-10 text-white">
         <Navbar />
-
         {/* ===== HERO ===== */}
         <section className="px-6 py-24 grid md:grid-cols-2 gap-16 items-center  ">
           <Main />

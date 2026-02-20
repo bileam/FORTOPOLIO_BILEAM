@@ -5,7 +5,7 @@ import { skillME } from "../datas/skill";
 const Skill = () => {
   return (
     <div
-      className=" bg-white/15  backdrop-blur-xl
+      className=" bg-white/15  backdrop-blur-xl relative
             border border-white/30
             rounded-3xl p-5"
     >

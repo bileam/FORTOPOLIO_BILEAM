@@ -6,7 +6,7 @@ import student from "../assets/graduition.svg";
 import intership from "../assets/intership.svg";
 import indo from "../assets/indonesia.svg";
 import Title from "../components/Title";
-
+import { worksme } from "../datas/Works";
 const About = () => {
   return (
     <div
@@ -28,7 +28,7 @@ const About = () => {
             <Cart Number="1-3" logo={pengalaman}>
               Year Experience
             </Cart>
-            <Cart Number="3" logo={project}>
+            <Cart Number={worksme.length} logo={project}>
               Project Complated
             </Cart>
           </div>

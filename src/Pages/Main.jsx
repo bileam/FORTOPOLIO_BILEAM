@@ -1,6 +1,7 @@
 import Button from "../components/Button";
 import GlowBlue from "../components/GlowBLue";
 
+
 const Main = () => {
   return (
     <div className="flex flex-col  gap-3 relative md:order-1 order-2">
