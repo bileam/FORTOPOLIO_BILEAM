@@ -59,10 +59,7 @@ const Navbar = () => {
         `}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* LOGO */}
           <h1 className="text-xl font-bold text-white">Bileam</h1>
-
-          {/* DESKTOP */}
           <ul className="hidden md:flex gap-8 text-sm">
             {menus.map((menu) => (
               <li
@@ -79,22 +76,30 @@ const Navbar = () => {
               >
                 {menu.name}
                 {active === menu.id && (
-                  <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-white rounded-full" />
+                  <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-white rounded-full" />
                 )}
               </li>
             ))}
           </ul>
-
-          {/* MOBILE BUTTON */}
           <button
             className="md:hidden text-white text-2xl"
             onClick={() => setOpen(!open)}
           >
             ☰
           </button>
+          <div>
+            <button
+              className="flex items-center gap-2
+                px-6 py-2 rounded-xl
+                bg-linear-to-r from-indigo-500 to-purple-600
+                font-semibold shadow-lg
+                hover:scale-105 transition"
+            >
+              Contect
+            </button>
+          </div>
         </div>
-
-        {/* MOBILE MENU */}
+        {/* = */}
         <div
           className={`
             md:hidden overflow-hidden transition-all duration-300

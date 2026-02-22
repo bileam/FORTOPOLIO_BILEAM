@@ -29,4 +29,13 @@ export const worksme = [
     deskription:
       "A Point of Sale (POS) application for a beauty clinic. I developed part of the frontend using React JS, Tailwind CSS, and Git.",
   },
+  {
+    id: 4,
+    foto: nich,
+    github: "https://github.com/ajiKurniawan076/DrNich-POS.git",
+    link: "#",
+    name: "Majemant Keuangan",
+    deskription:
+      "A Point of Sale (POS) application for a beauty clinic. I developed part of the frontend using React JS, Tailwind CSS, and Git.",
+  },
 ];

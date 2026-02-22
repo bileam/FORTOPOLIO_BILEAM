@@ -53,7 +53,8 @@ const Main = () => {
 
       <div className="flex gap-4 mt-3 flex-wrap">
         <a
-          href=""
+          href="https://github.com/bileam"
+          target="_blank"
           className="
             px-5 py-2 rounded-lg
             bg-white text-indigo-600 font-semibold
@@ -65,19 +66,21 @@ const Main = () => {
           My GitHub
         </a>
 
-        <div
-          href=""
+        <a
+          href="/files/BileamMangalla_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="
-            px-6 py-2 rounded-lg
-            font-semibold text-white
-            bg-linear-to-r from-[#444dfa] to-[#d339da]
-            shadow-xl
-            hover:scale-105 hover:brightness-110
-            transition-all duration-300
-          "
+           px-6 py-2 rounded-lg
+           font-semibold text-white
+           bg-linear-to-r from-[#444dfa] to-[#d339da]
+           shadow-xl
+           hover:scale-105 hover:brightness-110
+           transition-all duration-300
+         "
         >
           Download CV
-        </div>
+        </a>
       </div>
     </div>
   );

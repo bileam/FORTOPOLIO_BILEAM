@@ -33,14 +33,14 @@ const Works = () => {
               {item.name}
             </h4>
 
-            <p className="text-sm text-[#2f2b55] line-clamp-2 mb-4">
+            <p className="text-sm text-[#2f2b55] line-clamp-2 mb-4 text-[0.8rem]">
               {item.deskription}
             </p>
 
             <div className="flex justify-end">
               <Button
                 onClick={() => setSelectedWork(item)}
-                className="bg-linear-to-r from-[#444dfa] cursor-pointer to-[#d339da]/40"
+                className="bg-linear-to-r from-[#444dfa] cursor-pointer to-[#d339da]/40 text-[0.8rem]"
               >
                 VIEW
               </Button>

@@ -38,7 +38,7 @@ const Modals = ({ isOpen, onClose, data }) => {
 
         <div className="p-6 sm:p-8 text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-3">{data.name}</h2>
-          <p className="text-white/80 leading-relaxed mb-6 max-w-2xl">
+          <p className="text-white/80 text-[0.8rem] leading-relaxed mb-6 max-w-2xl">
             {data.deskription}
           </p>
           <div className="flex md:flex-wrap md:text-[1.rem] text-[0.8rem] gap-4">

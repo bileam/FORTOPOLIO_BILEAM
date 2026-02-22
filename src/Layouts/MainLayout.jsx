@@ -12,6 +12,7 @@ import Works from "../Pages/Works";
 
 import MagneticCard from "../components/MagneticCard";
 import person from "../assets/Gambar/pers.png";
+import wa from "../assets/wa1.svg";
 
 const MainLayout = () => {
   useEffect(() => {
@@ -88,6 +89,16 @@ const MainLayout = () => {
         <section id="works" className="scroll-mt-28 px-6 py-20 reveal">
           <Works />
         </section>
+
+        <a
+          href="https://wa.me/6281242922597?text=Hallo%20Bileam%20Mangalla%3F"
+          className="fixed bottom-10 right-10 cursor-pointer"
+          target="_blank"
+        >
+          <MagneticCard className="animate-float">
+            <img src={wa} alt="" className="w-10" />
+          </MagneticCard>
+        </a>
       </div>
     </div>
   );
