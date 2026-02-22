@@ -10,7 +10,7 @@ import { worksme } from "../datas/Works";
 const About = () => {
   return (
     <div
-      className="max-w-4xl 
+      className="max-w-4xl    animate-fadeUp
             bg-white/15 backdrop-blur-xl
             border border-white/30
             rounded-3xl p-5 "

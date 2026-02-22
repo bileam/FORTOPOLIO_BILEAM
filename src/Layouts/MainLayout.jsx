@@ -13,7 +13,7 @@ import Bulat from "../components/Bulat";
 const MainLayout = () => {
   return (
     <div
-      className="relative min-h-screen overflow-hidden 
+      className="relative min-h-screen overflow-x-hidden overflow-y-hidden
       bg-linear-to-br from-[#6366f1] via-[#8b5cf6] to-[#a855f7]"
     >
       {/* ===== GLOW BACKGROUND ===== */}

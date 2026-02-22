@@ -7,26 +7,23 @@ const Skill = () => {
   const [hasStarted, setHasStarted] = useState(false);
   const [progress, setProgress] = useState(skillME.map(() => 0));
 
-  // DETECT SAAT MASUK VIEWPORT
+  /* === OBSERVER === */
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setHasStarted(true);
-          observer.disconnect(); // jalan sekali
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 } // 30% terlihat
+      { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
-  // ANIMASI PROGRESS
+  /* === ANIMATION === */
   useEffect(() => {
     if (!hasStarted) return;
 
@@ -44,57 +41,92 @@ const Skill = () => {
       });
 
       setProgress([...current]);
-
       if (done) clearInterval(interval);
-    }, 15);
+    }, 18);
 
     return () => clearInterval(interval);
   }, [hasStarted]);
 
   return (
-    <div
+    <section
       ref={sectionRef}
-      className="bg-white/15 backdrop-blur-xl relative
-      border border-white/30
-      rounded-3xl p-5"
+      className="
+        bg-white/15 backdrop-blur-xl
+        border border-white/30
+        rounded-2xl sm:rounded-3xl
+        p-4 sm:p-6 lg:p-8
+      "
     >
       <Title>Skill</Title>
-      <p className="mb-2 text-[#2f2b55]">
-        Here are the technologogies i work with
+
+      <p className="mb-6 text-sm sm:text-base text-[#2f2b55]">
+        Here are the technologies I work with
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {skillME.map((items, index) => (
+      {/* GRID */}
+      <div
+        className="
+          grid grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-4
+          gap-4 sm:gap-6
+        "
+      >
+        {skillME.map((item, index) => (
           <div
-            key={items.id}
-            className="bg-linear-to-r from-[#444dfa] shadow-2xl to-purple-400 backdrop-blur-xl
-            border border-white/30
-            rounded-2xl p-6 
-            hover:scale-105 transition flex items-center gap-2"
+            key={item.id}
+            className="
+              bg-white/20 backdrop-blur-xl   animate-fadeUp
+              border border-white/30
+              rounded-xl sm:rounded-2xl
+              p-4 sm:p-5
+              transition
+              hover:scale-[1.03]
+              hover:shadow-xl
+              flex items-center gap-4
+            "
           >
-            <img src={items.logo} alt="" className="w-10 h-10 object-cover" />
+            {/* ICON */}
+            <div className="shrink-0">
+              <img
+                src={item.logo}
+                alt={item.name}
+                className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
+              />
+            </div>
 
+            {/* CONTENT */}
             <div className="flex flex-col w-full">
-              <div className="flex justify-between w-full">
-                <h1>{items.name}</h1>
-                <h1>{progress[index]} %</h1>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-semibold text-sm sm:text-base">
+                  {item.name}
+                </h3>
+                <span className="text-xs sm:text-sm font-medium">
+                  {progress[index]}%
+                </span>
               </div>
 
-              <div className="relative w-full h-2 border rounded-md overflow-hidden">
+              {/* PROGRESS BAR */}
+              <div className="relative w-full h-2 sm:h-2.5 bg-white/30 rounded-full overflow-hidden">
                 <span
-                  className={`absolute left-0 bottom-0 h-full ${
-                    progress[index] < 70
-                      ? "bg-white"
-                      : "bg-linear-to-r from-[#a5e3fc] to-red-600"
-                  } rounded-full transition-all duration-300`}
+                  className={`
+                    absolute left-0 top-0 h-full rounded-full
+                    transition-all duration-300
+                    ${
+                      progress[index] < 70
+                        ? "bg-white"
+                        : "bg-linear-to-r from-[#a5e3fc] to-red-500"
+                    }
+                  `}
                   style={{ width: `${progress[index]}%` }}
-                ></span>
+                />
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
