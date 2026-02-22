@@ -2,8 +2,75 @@
 body {
   font-family: "Times New Roman", Times, serif;
   background-color: rgba(255, 255, 255, 0.05);
+  /* height: 100%;
+  overflow: hidden; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FLOAT IMAGE */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* MAGNETIC CARD */
+.magnetic {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+.magnetic-inner {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* OPTIONAL: glow follow mouse */
+.magnetic-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(255, 255, 255, 0.15),
+    transparent 60%
+  );
+}
+
+/* .parallax {
+  transition: transform 0.6s ease-out;
+  will-change: transform;
+} */
+
+/* OPTIONAL: smooth font */
+/* body {
+  -webkit-font-smoothing: antialiased;
+} */
 @keyframes scaleIn {
   from {
     opacity: 0;

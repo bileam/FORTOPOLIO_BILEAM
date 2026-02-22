@@ -65,7 +65,7 @@ const Main = () => {
           My GitHub
         </a>
 
-        <a
+        <div
           href=""
           className="
             px-6 py-2 rounded-lg
@@ -77,7 +77,7 @@ const Main = () => {
           "
         >
           Download CV
-        </a>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Title from "../components/Title";
 import { skillME } from "../datas/skill";
+import MagneticCard from "../components/MagneticCard";
 
 const Skill = () => {
   const sectionRef = useRef(null);
@@ -97,7 +98,7 @@ const Skill = () => {
             </div>
 
             {/* CONTENT */}
-            <div className="flex flex-col w-full">
+            <MagneticCard className="flex flex-col w-full">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-semibold text-sm sm:text-base">
                   {item.name}
@@ -122,7 +123,7 @@ const Skill = () => {
                   style={{ width: `${progress[index]}%` }}
                 />
               </div>
-            </div>
+            </MagneticCard>
           </div>
         ))}
       </div>
