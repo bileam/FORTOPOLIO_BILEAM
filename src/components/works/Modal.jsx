@@ -56,7 +56,7 @@ const Modals = ({ isOpen, onClose, data }) => {
             </a>
 
             <a
-              href={data.code}
+              href={data.github}
               target="_blank"
               className="flex items-center gap-2
                 px-6 py-3 rounded-xl

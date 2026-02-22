@@ -1,17 +1,21 @@
+import { useEffect } from "react";
+import Navbar from "./Navbar";
+
 import GlowPink from "../components/Glow";
 import GlowBlue from "../components/GlowBLue";
-import About from "../Pages/About";
+import Bulat from "../components/Bulat";
+
 import Main from "../Pages/Main";
-import Navbar from "./Navbar";
-import person from "../assets/Gambar/pers.png";
+import About from "../Pages/About";
 import Skill from "../Pages/Skill";
 import Works from "../Pages/Works";
-import Bulat from "../components/Bulat";
-import { useEffect } from "react";
+
 import MagneticCard from "../components/MagneticCard";
+import person from "../assets/Gambar/pers.png";
 
 const MainLayout = () => {
   useEffect(() => {
+    // Reveal animation
     const elements = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver(
@@ -27,11 +31,12 @@ const MainLayout = () => {
 
     elements.forEach((el) => observer.observe(el));
 
+    // SAFE PARALLAX (BACKGROUND ONLY)
     const handleScroll = () => {
       const scrolled = window.scrollY;
       document.querySelectorAll(".parallax").forEach((el) => {
-        const speed = el.dataset.speed || 0.3;
-        el.style.transform = `translateY(${scrolled * speed}px)`;
+        const speed = Number(el.dataset.speed || 0.2);
+        el.style.transform = `translate3d(0, ${scrolled * speed}px, 0)`;
       });
     };
 
@@ -44,13 +49,16 @@ const MainLayout = () => {
       {/* BACKGROUND PARALLAX */}
       <GlowPink className="parallax" data-speed="0.2" />
       <GlowBlue className="parallax" data-speed="0.15" />
-      <Bulat className="parallax" data-speed="0.1 top-100 left-120" />
+      <Bulat className="parallax" data-speed="0.1" />
 
       <div className="relative z-10 text-white">
         <Navbar />
 
         {/* HERO */}
-        <section className="px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal">
+        <section
+          id="home"
+          className="scroll-mt-28 px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal"
+        >
           <Main />
 
           <MagneticCard className="flex justify-center">
@@ -69,15 +77,15 @@ const MainLayout = () => {
           </MagneticCard>
         </section>
 
-        <section className="px-6 py-20 reveal">
+        <section id="about" className="scroll-mt-28 px-6 py-20 reveal">
           <About />
         </section>
 
-        <section className="px-6 py-20 reveal">
+        <section id="skills" className="scroll-mt-28 px-6 py-20 reveal">
           <Skill />
         </section>
 
-        <section className="px-6 py-20 reveal">
+        <section id="works" className="scroll-mt-28 px-6 py-20 reveal">
           <Works />
         </section>
       </div>

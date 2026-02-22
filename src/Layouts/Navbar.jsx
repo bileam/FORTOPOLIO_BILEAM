@@ -1,27 +1,91 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const menus = [
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Works", id: "works" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
+
+  // Navbar blur + scroll spy (AMAN)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-120px 0px -60% 0px",
+        threshold: 0,
+      }
+    );
+
+    menus.forEach((menu) => {
+      const section = document.getElementById(menu.id);
+      if (section) observer.observe(section);
+    });
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth" });
+    setOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
-      <div className="backdrop-blur-xl bg-white/10 border-b border-white/20">
+      <div
+        className={`
+          transition-all duration-300
+          ${scrolled ? "backdrop-blur-xl bg-black/30  " : "bg-transparent"}
+        `}
+      >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* LOGO */}
           <h1 className="text-xl font-bold text-white">Bileam</h1>
 
-          {/* MENU DESKTOP */}
-          <ul className="hidden md:flex gap-8 text-sm text-white/80">
-            {["Home", "About", "Skills", "Works", "Contact"].map((item) => (
+          {/* DESKTOP */}
+          <ul className="hidden md:flex gap-8 text-sm">
+            {menus.map((menu) => (
               <li
-                key={item}
-                className="hover:text-white cursor-pointer transition"
+                key={menu.id}
+                onClick={() => scrollTo(menu.id)}
+                className={`
+                  cursor-pointer relative transition
+                  ${
+                    active === menu.id
+                      ? "text-white"
+                      : "text-white/60 hover:text-white"
+                  }
+                `}
               >
-                {item}
+                {menu.name}
+                {active === menu.id && (
+                  <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-white rounded-full" />
+                )}
               </li>
             ))}
           </ul>
 
-          {/* BUTTON MOBILE */}
+          {/* MOBILE BUTTON */}
           <button
             className="md:hidden text-white text-2xl"
             onClick={() => setOpen(!open)}
@@ -30,22 +94,28 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* MENU MOBILE */}
-        {open && (
-          <div className="md:hidden px-6 pb-6">
-            <ul className="flex flex-col gap-4 text-white/90">
-              {["Home", "About", "Skills", "Works", "Contact"].map((item) => (
-                <li
-                  key={item}
-                  className="border-b border-white/20 pb-2"
-                  onClick={() => setOpen(false)}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {/* MOBILE MENU */}
+        <div
+          className={`
+            md:hidden overflow-hidden transition-all duration-300
+            ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+          `}
+        >
+          <ul className="px-6 pb-6 flex flex-col gap-4 text-white/90">
+            {menus.map((menu) => (
+              <li
+                key={menu.id}
+                onClick={() => scrollTo(menu.id)}
+                className={`
+                  pb-2 border-b border-white/20
+                  ${active === menu.id ? "font-semibold text-white" : ""}
+                `}
+              >
+                {menu.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

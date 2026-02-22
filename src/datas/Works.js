@@ -5,6 +5,7 @@ export const worksme = [
   {
     id: 1,
     foto: listTas,
+    github: "https://github.com/bileam/Web_Tas.git",
     link: "https://web-tas-h6ax.vercel.app/",
     name: "Aura & Co – E-Commerce Website",
     deskription:
@@ -13,6 +14,7 @@ export const worksme = [
   {
     id: 2,
     foto: POSCAffe,
+    github: "https://github.com/bileam/POS_Caffe.git",
     link: "https://pos-caffe.vercel.app/",
     name: "Poin of sale Caffe",
     deskription:
@@ -21,6 +23,7 @@ export const worksme = [
   {
     id: 3,
     foto: nich,
+    github: "https://github.com/ajiKurniawan076/DrNich-POS.git",
     link: "#",
     name: "Poin of sale DR.nich",
     deskription:
