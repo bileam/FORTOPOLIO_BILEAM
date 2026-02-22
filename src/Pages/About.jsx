@@ -18,7 +18,7 @@ const About = () => {
       <Title>About Me</Title>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2">
         <div className="flex flex-col gap-4 ">
-          <p className="max-w-xl text-left md:text-justify leading-relaxed text-[#2f2b55]">
+          <p className="max-w-xl text-left md:text-justify leading-relaxed text-[#2f2b55] text-[0.8rem] md:text-[1rem]">
             I am an IT graduate with hands-on experience in building modern web
             applications using React, Tailwind CSS, Express.js, and MongoDB. I
             am passionate about problem-solving and creating clean,
