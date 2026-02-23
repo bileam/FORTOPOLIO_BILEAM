@@ -4,25 +4,29 @@ import { worksme } from "../datas/Works";
 import { useState } from "react";
 import Modals from "../components/works/Modal";
 import Title from "../components/Title";
+import { cardGradients } from "../datas/gradinents";
 
 const Works = () => {
   const [selectedWork, setSelectedWork] = useState(null);
 
   return (
-    <div className="bg-white/15 backdrop-blur-xl border border-white/30 rounded-3xl p-5">
+    <div className="md:bg-white/15 bg-white/1 backdrop-blur-xl md:border border-white/30  rounded-3xl p-5">
       <Title>WORKS</Title>
       <p className="mb-2 text-[#2f2b55]">Some of my recent project</p>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {worksme.map((item) => (
+        {worksme.map((item, index) => (
           <MagneticCard
             key={item.id}
-            className="
-              bg-white/15 backdrop-blur-xl
+            // bg-white/15
+            className={`
+            ${cardGradients[index % cardGradients.length]}
+              
+               backdrop-blur-xl
               border border-white/30
               rounded-3xl p-6
               hover:shadow-2xl
-            "
+            `}
           >
             <img
               src={item.foto}

@@ -66,7 +66,7 @@ const Navbar = () => {
                 key={menu.id}
                 onClick={() => scrollTo(menu.id)}
                 className={`
-                  cursor-pointer relative transition
+                  cursor-pointer relative transition group  
                   ${
                     active === menu.id
                       ? "text-white"
@@ -76,7 +76,7 @@ const Navbar = () => {
               >
                 {menu.name}
                 {active === menu.id && (
-                  <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-white rounded-full" />
+                  <span className="absolute -bottom-2 bg-linear-to-r from-[#444dfa] to-[#d339da] left-0 w-full h-0.5  rounded-full" />
                 )}
               </li>
             ))}

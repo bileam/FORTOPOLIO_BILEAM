@@ -71,6 +71,8 @@ html {
 /* body {
   -webkit-font-smoothing: antialiased;
 } */
+
+/* stars for modal */
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -85,6 +87,8 @@ html {
 .animate-scaleIn {
   animation: scaleIn 0.35s ease-out;
 }
+
+/* end for modal */
 
 @keyframes fadeUp {
   from {

@@ -91,11 +91,11 @@ const MainLayout = () => {
         </section>
 
         <a
-          href="https://wa.me/6281242922597?text=Hallo%20Bileam%20Mangalla%3F"
+          href="https://wa.me/6281242922597?text=Hallo%20Bileam%20Mangalla"
           className="fixed bottom-10 right-10 cursor-pointer"
           target="_blank"
         >
-          <MagneticCard className="animate-float">
+          <MagneticCard className="animate-float p-2  bg-linear-to-r from-[#444dfa] to-[#d339da] rounded-full">
             <img src={wa} alt="" className="w-10" />
           </MagneticCard>
         </a>

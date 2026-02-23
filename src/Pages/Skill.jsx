@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Title from "../components/Title";
 import { skillME } from "../datas/skill";
 import MagneticCard from "../components/MagneticCard";
+import { cardGradients } from "../datas/gradinents";
 
 const Skill = () => {
   const sectionRef = useRef(null);
@@ -77,7 +78,8 @@ const Skill = () => {
         {skillME.map((item, index) => (
           <div
             key={item.id}
-            className="
+            className={`
+            ${cardGradients[index % cardGradients]}
               bg-white/20 backdrop-blur-xl   animate-fadeUp
               border border-white/30
               rounded-xl sm:rounded-2xl
@@ -86,7 +88,7 @@ const Skill = () => {
               hover:scale-[1.03]
               hover:shadow-xl
               flex items-center gap-4
-            "
+            `}
           >
             {/* ICON */}
             <div className="shrink-0">

@@ -15,7 +15,7 @@ const Modals = ({ isOpen, onClose, data }) => {
           bg-white/20 backdrop-blur-xl
           border border-white/30
           shadow-[0_25px_80px_rgba(0,0,0,0.4)]
-          overflow-hidden animate-scaleIn"
+          overflow-hidden "
       >
         <button
           onClick={onClose}

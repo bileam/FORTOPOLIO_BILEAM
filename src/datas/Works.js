@@ -1,10 +1,13 @@
 import listTas from "../assets/works/listtas.png";
+import listmodaltas from "../assets/works/projectTas.png";
 import POSCAffe from "../assets/works/POSCAffe.png";
 import nich from "../assets/works/POSDRNICH.png";
+import porto1 from "../assets/works/porto1.png";
 export const worksme = [
   {
     id: 1,
     foto: listTas,
+    modal: listmodaltas,
     github: "https://github.com/bileam/Web_Tas.git",
     link: "https://web-tas-h6ax.vercel.app/",
     name: "Aura & Co – E-Commerce Website",
@@ -37,5 +40,14 @@ export const worksme = [
     name: "Majemant Keuangan",
     deskription:
       "A Point of Sale (POS) application for a beauty clinic. I developed part of the frontend using React JS, Tailwind CSS, and Git.",
+  },
+  {
+    id: 5,
+    foto: porto1,
+    github: "https://github.com/bileam/Portofolio.git",
+    link: "https://bileammangallaportofolio.vercel.app/",
+    name: "Fortopolio (personal project)",
+    deskription:
+      "A personal portfolio website showcasing profile, skills, projects, and experiences with a clean, modern, and natural design.",
   },
 ];
