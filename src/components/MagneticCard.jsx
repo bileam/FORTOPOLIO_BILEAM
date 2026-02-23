@@ -1,7 +1,7 @@
 import useMagnetic from "../hooks/useMagnetic";
 
 const MagneticCard = ({ children, className }) => {
-  const magnetic = useMagnetic(20);
+  const magnetic = useMagnetic(15);
 
   return (
     <div

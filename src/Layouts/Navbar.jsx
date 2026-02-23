@@ -89,9 +89,9 @@ const Navbar = () => {
           </button>
           <div>
             <button
-              className="flex items-center gap-2
+              className="flex items-center gap-2 cursor-pointer
                 px-6 py-2 rounded-xl
-                bg-linear-to-r from-indigo-500 to-purple-600
+               bg-linear-to-r from-[#444dfa] to-[#d339da]
                 font-semibold shadow-lg
                 hover:scale-105 transition"
             >
