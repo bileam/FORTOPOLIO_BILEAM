@@ -87,9 +87,9 @@ const Navbar = () => {
           >
             ☰
           </button>
-          <div>
+          <div className="lg:block hidden">
             <button
-              className="flex items-center gap-2 cursor-pointer
+              className="flex  items-center gap-2 cursor-pointer
                 px-6 py-2 rounded-xl
                bg-linear-to-r from-[#444dfa] to-[#d339da]
                 font-semibold shadow-lg
