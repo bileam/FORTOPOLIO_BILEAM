@@ -92,7 +92,7 @@ const MainLayout = () => {
           <Works />
         </section>
         <div className="fixed left-5 hidden md:block top-[45%]">
-          <Media className="animate-float delay-300" />
+          <Media className="animate-float delay-300 bg-black/60 py-3 px-2 rounded-2xl" />
         </div>
 
         <Desktop className="md:hidden block" />
