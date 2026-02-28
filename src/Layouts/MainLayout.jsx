@@ -13,6 +13,8 @@ import Works from "../Pages/Works";
 import MagneticCard from "../components/MagneticCard";
 import person from "../assets/Gambar/pers.png";
 import wa from "../assets/wa1.svg";
+import Media from "../components/SosialMedia";
+import Desktop from "../components/Mediadesktop";
 
 const MainLayout = () => {
   useEffect(() => {
@@ -89,16 +91,20 @@ const MainLayout = () => {
         <section id="works" className="scroll-mt-28 px-6 py-20 reveal">
           <Works />
         </section>
+        <div className="fixed left-5 hidden md:block top-[45%]">
+          <Media className="animate-float delay-300" />
+        </div>
 
-        <a
+        <Desktop className="md:hidden block" />
+        {/* <a
           href="https://wa.me/6281242922597?text=Hallo%20Bileam%20Mangalla"
           className="fixed bottom-10 right-10 cursor-pointer"
           target="_blank"
         >
-          <MagneticCard className="animate-float p-2  bg-linear-to-r from-[#444dfa] to-[#d339da] rounded-full">
+          <MagneticCard className="animate-float p-2 md:hidden block  bg-linear-to-r from-[#444dfa] to-[#d339da] rounded-full">
             <img src={wa} alt="" className="w-10" />
           </MagneticCard>
-        </a>
+        </a> */}
       </div>
     </div>
   );
