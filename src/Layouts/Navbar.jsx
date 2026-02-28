@@ -51,14 +51,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="fixed top-0 left-0 w-full z-50 flex flex-col items-center">
       <div
         className={`
-          transition-all duration-300
-          ${scrolled ? "backdrop-blur-xl bg-black/30  " : "bg-transparent"}
+          transition-all duration-300 mt-5 w-[90%] rounded-3xl
+          ${scrolled ? "backdrop-blur-xl bg-black/30  " : " bg-black/30"}
         `}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto  px-2 md:px-0 py-2 flex justify-between items-center w-[90%] ">
           <h1 className="text-xl font-bold text-white">Bileam</h1>
           <ul className="hidden md:flex gap-8 text-sm">
             {menus.map((menu) => (

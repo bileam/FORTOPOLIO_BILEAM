@@ -15,6 +15,7 @@ import person from "../assets/Gambar/pers.png";
 import wa from "../assets/wa1.svg";
 import Media from "../components/SosialMedia";
 import Desktop from "../components/Mediadesktop";
+import Opening from "../Pages/Opening";
 
 const MainLayout = () => {
   useEffect(() => {
@@ -48,23 +49,23 @@ const MainLayout = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-linear-to-br from-[#6366f1] via-[#8b5cf6] to-[#a855f7]">
-      {/* BACKGROUND PARALLAX */}
+    //  bg-linear-to-br  from-[#6366f1] via-[#8b5cf6] to-[#a855f7]
+    <div className="relative min-h-screen overflow-x-hidden bg-linear-to-b from-[#a855f7]  via-[#312e81]  to-[#a855f7]">
+      <Opening />
+
       <GlowPink className="parallax" data-speed="0.2" />
       <GlowBlue className="parallax" data-speed="0.15" />
       <Bulat className="parallax" data-speed="0.1" />
 
       <div className="relative z-10 text-white">
         <Navbar />
-
-        {/* HERO */}
         <section
           id="home"
           className="scroll-mt-28 px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal"
         >
           <Main />
 
-          <MagneticCard className="flex justify-center">
+          <div className="flex justify-center">
             <img
               src={person}
               alt="Profile"
@@ -77,7 +78,7 @@ const MainLayout = () => {
                 animate-float
               "
             />
-          </MagneticCard>
+          </div>
         </section>
 
         <section id="about" className="scroll-mt-28 px-6 py-20 reveal">
@@ -94,17 +95,7 @@ const MainLayout = () => {
         <div className="fixed left-5 hidden md:block top-[45%]">
           <Media className="animate-float delay-300 bg-black/60 py-3 px-2 rounded-2xl" />
         </div>
-
         <Desktop className="md:hidden block" />
-        {/* <a
-          href="https://wa.me/6281242922597?text=Hallo%20Bileam%20Mangalla"
-          className="fixed bottom-10 right-10 cursor-pointer"
-          target="_blank"
-        >
-          <MagneticCard className="animate-float p-2 md:hidden block  bg-linear-to-r from-[#444dfa] to-[#d339da] rounded-full">
-            <img src={wa} alt="" className="w-10" />
-          </MagneticCard>
-        </a> */}
       </div>
     </div>
   );
