@@ -17,7 +17,7 @@ const Opening = () => {
       <h1
         data-aos="fade-up"
         className=" 
-    text-[2rem]   md:text-[6rem] font-extrabold
+    text-[4rem]   md:text-[6rem] font-extrabold
     text-[#e9d5ff]
     drop-shadow-[0_0_30px_rgba(168,85,247,0.8)]
     drop-shadow-[0_0_60px_rgba(99,102,241,0.6)]
