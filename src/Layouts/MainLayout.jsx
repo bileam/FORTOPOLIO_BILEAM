@@ -61,7 +61,7 @@ const MainLayout = () => {
         <Navbar />
         <section
           id="home"
-          className="scroll-mt-28 px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal"
+          className="scroll-mt-0 px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal"
         >
           <Main />
 
@@ -81,7 +81,10 @@ const MainLayout = () => {
           </div>
         </section>
 
-        <section id="about" className="scroll-mt-28 px-6 py-20 reveal">
+        <section
+          id="about"
+          className="scroll-mt-5 md:scroll-mt-25 px-6 py-20 reveal"
+        >
           <About />
         </section>
 
