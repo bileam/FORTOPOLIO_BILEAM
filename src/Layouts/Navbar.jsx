@@ -51,10 +51,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex flex-col items-center">
+    <nav className="fixed  top-0 left-0 w-full z-50 flex flex-col items-center">
       <div
         className={`
-          transition-all duration-300 mt-5 w-[90%] rounded-3xl
+          transition-all duration-500 mt-5 xl:w-[60%] w-[90%] rounded-3xl xl:container mx-auto 
           ${scrolled ? "backdrop-blur-xl bg-black/30  " : " bg-black/30"}
         `}
       >

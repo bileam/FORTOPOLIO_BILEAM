@@ -50,15 +50,14 @@ const MainLayout = () => {
 
   return (
     //  bg-linear-to-br  from-[#6366f1] via-[#8b5cf6] to-[#a855f7]
-    <div className="relative min-h-screen overflow-x-hidden bg-linear-to-b from-[#a855f7]  via-[#312e81]  to-[#a855f7]">
+    <div className="relative xl:container transition-all duration-500 mx-auto min-h-screen overflow-x-hidden bg-linear-to-b from-[#a855f7]  via-[#312e81]  to-[#a855f7]">
       <Opening />
 
       <GlowPink className="parallax" data-speed="0.2" />
       <GlowBlue className="parallax" data-speed="0.15" />
       <Bulat className="parallax" data-speed="0.1" />
-
-      <div className="relative z-10 text-white">
-        <Navbar />
+      <Navbar />
+      <div className="relative z-10 text-white  ">
         <section
           id="home"
           className="scroll-mt-0 px-6 py-24 min-h-screen grid md:grid-cols-2 gap-16 items-center reveal"
@@ -95,7 +94,7 @@ const MainLayout = () => {
         <section id="works" className="scroll-mt-28 px-6 py-20 reveal">
           <Works />
         </section>
-        <div className="fixed left-5 hidden md:block top-[45%]">
+        <div className="fixed   3xl:left-70  2xl:left-60  lg:left-8 xl:left-10    left-5 hidden md:block top-[45%]">
           <Media className="animate-float delay-300 bg-black/60 py-3 px-2 rounded-2xl" />
         </div>
         <Desktop className="md:hidden block" />

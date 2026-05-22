@@ -3,6 +3,7 @@ import listmodaltas from "../assets/works/projectTas.png";
 import POSCAffe from "../assets/works/POSCAffe.png";
 import nich from "../assets/works/POSDRNICH.png";
 import porto1 from "../assets/works/porto1.png";
+import RAB from "../assets/works/RAB.png";
 export const worksme = [
   {
     id: 1,
@@ -49,5 +50,14 @@ export const worksme = [
     name: "Fortopolio (personal project)",
     deskription:
       "A personal portfolio website showcasing profile, skills, projects, and experiences with a clean, modern, and natural design.",
+  },
+  {
+    id: 6,
+    foto: RAB,
+    github: "https://github.com/bileam/PT.Renol_anugrah_bersama.git",
+    link: "https://github.com/bileam/PT.Renol_anugrah_bersama.git",
+    name: "PT. Renol Anugrah Bersama (personal project)",
+    deskription:
+      "A clean and modern company profile website for PT. Renol Anugrah Bersama featuring company information, services, project portfolio, and contact section with responsive and professional UI design.",
   },
 ];
